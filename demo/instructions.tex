@@ -1,0 +1,176 @@
+\documentclass[11pt]{article}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb} 
+\usepackage{color}
+\usepackage{datetime}
+\usepackage{everypage}
+\usepackage{lastpage}
+\usepackage{multirow}
+\usepackage{textpos}
+\usepackage{nicefrac}
+\usepackage{setspace}
+\usepackage{tikz}
+\newcommand{\dblbkt}[1]{\ignorespaces}
+\usetikzlibrary{calc,arrows,automata,shapes.misc,shapes.arrows,chains,matrix,positioning,scopes,decorations.pathmorphing,shadows}
+%can always use
+\topmargin 0in 
+\headheight 0in 
+\headsep 0in 
+\textheight 9in 
+\textwidth 6.5in 
+\oddsidemargin 0in 
+\evensidemargin 0in 
+% \usepackage{fullpage}
+
+\setlength\TPHorizModule{1in}
+\setlength\TPVertModule{1in}
+
+\pagestyle{empty}
+\settimeformat{ampmtime}
+\begin{document}
+
+
+\AddEverypageHook{
+  \begin{textblock}{8.5}(-1,-1) 
+    \textblockcolour{}
+    \begin{tikzpicture}[transform shape,>=stealth] 
+      \hspace{-.05in}
+      \node at (0in,0in){};
+      \node at (8.5in,-11in){};
+      \def\topbar{-.5in}
+      \def\bottombar{-10.25in}
+      \draw (.5in,\bottombar) -- (8in,\bottombar);
+      \node [anchor=north] at (4.25in,\bottombar) {};
+      \node [anchor=north west] at (.5in,\bottombar) {};
+      \node [anchor=south] at (4.25in,\topbar) {Economic Science Laboratory $ \bullet $ University of Arizona};
+      \draw (.5in,\topbar) -- (8in,\topbar);
+      \node [anchor=north] at (4.25in,\bottombar-.1in) {Page \thepage\ };%of \pageref{LastPage}};
+      \node [anchor=south east] at (8in,\topbar) {};
+      \node [anchor=south west] at (.5in,\topbar) {};
+    \end{tikzpicture}
+  \end{textblock}
+}
+
+\def\firstChoice{W}
+\def\secondChoice{Y}
+
+%STARTTEXT
+
+% {\bf Please write on these instructions if needed.  However, if you don't write on these instructions, we will save paper by using them again in a future session.  Please use the back of your consent form for general notes and doodles.} 
+
+\section*{\dblbkt{3} Welcome} 
+
+You are about to participate in an \dblbkt{1} experiment in the economics of decision-making. If you listen carefully, \dblbkt{1} you could earn a large amount of money, that will be paid to you in cash, in private, at the end of the experiment. 
+\\ 
+\\ 
+It is important \dblbkt{1} that you remain silent, and do not look at other people's work.  If you have any questions, or need any assistance of any kind, \dblbkt{1} please raise your hand and an experimenter will help you out.  \dblbkt{3} During the experiment, \dblbkt{1}{\bf do not talk, laugh or exclaim out loud} and be sure to \dblbkt{1} keep your {\bf eyes on your screen only}.  In addition, \dblbkt{1} please {\bf turn off your electronic devices} and put them away during the experiment.  Anybody that violates these rules will be asked to leave and will {\bf not} be paid. \dblbkt{1} We expect, and appreciate your cooperation.   
+
+\section*{\dblbkt{3} Agenda}
+
+\begin{enumerate} 
+\dblbkt{1} \item Instructions.
+\dblbkt{1} \item Quiz (to make sure everyone understands the instructions).  The quiz will consist of 12 questions.  The experiment will not begin until everyone has correctly answered all questions.
+\dblbkt{1} \item Experiment. 
+\dblbkt{1} \item Survey. After you have completed the experiment, you will be asked to answer several survey questions using the computer.  
+\dblbkt{1} \item Payment. At the end of the experiment, you will be paid in cash, in private.
+\end{enumerate} 
+
+
+\section*{\dblbkt{3} Overview of the Experiment}
+
+In the experiment today, you will be \dblbkt{1} matched into pairs, and will be asked to make choices.  The choices made by you may \dblbkt{1} affect both your payoff, as well as \dblbkt{1} the payoff of the subject that you are matched with.  Similarly, the choices of the subject that you are matched with may \dblbkt{1} affect both their payoff and your payoff as well.
+
+
+\section*{\dblbkt{3} Details of the Experiment} 
+\begin{itemize} 
+\item In the experiment today, you will be working with a fictitious currency called Francs. You will be paid in US Dollars at the end of the experiment.
+\begin{center} 
+\dblbkt{1}{\bf Exchange rate}: 70 Francs = \$1.
+\end{center} 
+
+\item  This experiment consists of \dblbkt{1}{\bf three matches}, each of which may have a different number of periods, and may have different payoffs.  
+\item At the beginning of each match, \dblbkt{1} you will be randomly matched with one other subject that you have not been matched with before.  You will never be matched with a subject that you have been matched with in a previous match. 
+\item You will remain \dblbkt{1} anonymous throughout the experiment.  You will not know the identity of the subject that you are matched with, and the subject that you are matched with will not know your identity.  
+\item The choices you make in a given match will impact both your payoff and the payoff of the subject you are matched with.  These choices will not impact any of the subjects that you are not matched with.  
+\item You will remain matched with this \dblbkt{1} same subject until the end of the match.  
+\item After you and the subject that you are matched with have finished the match, please wait quietly for all pairs to finish their match.  
+\item Once all pairs have finished their match, you will be \dblbkt{1} randomly rematched with another subject that you have not been matched with yet, and the next match will begin.  
+\end{itemize}
+
+
+\subsection*{\dblbkt{6} Experimental Interface}
+\begin{itemize}
+\item Next, we will go over the experimental interface.  The experimental interface consists of five components: 
+\begin{enumerate} 
+\item \dblbkt{3} The payoff table is displayed at the top left of the screen.  The payoff table has your choices (the rows, \dblbkt{1} U and \dblbkt{1} D), and the choices of the subject that you are matched with (the columns, \dblbkt{1} L and \dblbkt{1} R).  For any combination of choices for you and the subject that you are matched with, there is a payoff.  Your payoff is on the left, and the payoff for the subject that you are matched with is on the right.  For example, if you \dblbkt{1} choose $D$, and the subject that you are matched with \dblbkt{1} chooses $L$, \dblbkt{1} then your payoff is 6, and \dblbkt{1} the payoff for the subject that you are matched with is 3.  The payoff table in the experiment today will be different than the one displayed here.  In addition, the payoffs will remain the same for all periods in a single match, but may change in different matches.
+\item \dblbkt{3} The summary of the current period is shown in the top right. 
+\item \dblbkt{1} The summary of all periods is shown below that.
+\item \dblbkt{4} The history of play is displayed in the bottom half of the screen.
+\item \dblbkt{4} Finally, the current status is displayed across the middle of the screen.  The current status tells you what to do at any point during the experiment.
+\end{enumerate} 
+\end{itemize}
+
+\subsection*{\dblbkt{2} Specific Instructions for Each Period} 
+\begin{itemize} 
+\item At any point during a period, you will see one of three status messages:
+\item {\bf Status \#1:} Please select My Choice (U or D) and your guess for Other's Choice (L or R).
+\begin{itemize} 
+\item When you see this status message, you need to do two things. 
+\begin{enumerate} 
+\item Select a row for your choice (in this example, either U or D).  \dblbkt{1} Once you have selected a row, it will be outlined, and the label ``My Choice'' will be added.  \dblbkt{1} My choice will also be updated on the period summary.
+\item Select the column that you think the subject that you are matched with will select (in this example, either L or R). \dblbkt{1} Once you have selected a column, it will be outlined, and the label ``My Guess'' will be added.  \dblbkt{1} My guess will also be updated on the period summary.  If you correctly guess the choice of the subject that you are matched with in a given period, then you will earn a raffle ticket.  At the end of the experiment, one raffle ticket will be randomly selected, and the winner will receive a bonus of \$5.  Therefore, the more correct guesses you make, the more raffle tickets you will have, and the more likely you are to win the \$5 bonus.
+\end{enumerate} 
+\end{itemize} 
+\item \dblbkt{1} {\bf Status \#2:} Please wait for the other subject to finish making their choices.
+\begin{itemize} 
+\item When you see this status message, please wait patiently for the subject that you are matched with to finish making their choices. 
+\item If the other subject makes their choices before you in a specific period, you will not see this status.
+\end{itemize} 
+\item \dblbkt{1} {\bf Status \#3:} Click on the payoffs for this period (with green background) in the game table to move to the next period.
+\begin{itemize} 
+\item When you see this status message, all choices for the period have been made, and you can view the final results.  
+\item \dblbkt{1} The column selected by the subject that you are matched with is outlined and labeled ``Other's Choice.''  If your guess about their choice was correct, then the column will be outlined in yellow.
+\item \dblbkt{1} The entry of the payoff table that is at the intersection of the row that you selected, and the column that the subject that you are matched with selected, is highlighted with a green background.   
+\item This entry displays the payoffs for the current period.  Your payoff for the period is displayed on the left, and the payoff of the subject that you are matched with is displayed on the right.  
+\item At this point, the period summary has been updated to include \dblbkt{1} the choice of the subject that you are matched with, \dblbkt{1} and the current payoffs for this period.  These choices have also been added to the \dblbkt{1} history of play at the bottom of the screen.  
+\item  Finally, \dblbkt{1} the overall summary has been updated to include \dblbkt{1} the total payoffs including this period, as well as \dblbkt{1} the number of raffle tickets you have earned for correctly guessing the choice of the subject that you are matched with.
+\item \dblbkt{1} To move on to the next period, you need to click on the payoffs for this period in the game table, which have been highlighted in  \dblbkt{1} green. \dblbkt{slnc 3000} 
+\end{itemize} 
+\end{itemize}
+
+\subsubsection*{\dblbkt{4}Number of Periods Per Match} 
+
+\begin{itemize} 
+\item The number of periods in each match will be determined randomly using the following procedure.  
+\begin{itemize} 
+  \item At the end of each period, \dblbkt{1}a number will be chosen randomly from the set of numbers \dblbkt{1} $ \{1,2,3,\ldots, 98, 99, 100\}$, where {\bf each number is equally likely}.  
+  \item \dblbkt{1}If the number is 1, then the match will end.
+  \item \dblbkt{1}If the number is not 1, then the match will continue.
+  \item The number will always be placed back into the set after it is drawn.  
+  \item \dblbkt{1}Thus, in any period there is a \dblbkt{1}1\% chance that the match will end, and a \dblbkt{1}99\% chance that the match will have another period.
+  % \item Therefore, \dblbkt{1}the expected number of periods in each match will be 100, but it is possible that there are more or less periods in a given match.
+  \item \dblbkt{1}This procedure has been performed on the computer before the experiment. Therefore, you will not see the number selected from the set of numbers $ \{1,2,3,\ldots, 98, 99, 100\}$.
+  \item To ensure that the length of the match is not dependent on your play, the number of periods for each match has been written on the board before the experiment, and will be uncovered at the end of the experiment.  
+\end{itemize} 
+\end{itemize}
+
+
+
+\subsubsection*{\dblbkt{3} Payoffs} 
+
+\begin{itemize} 
+\item \dblbkt{1} Your payment at the end of the experiment will contain the following:
+\begin{enumerate} 
+  \dblbkt{1} \item The \$5 show up fee.
+  \dblbkt{1} \item Payment for sum of Francs from all periods \dblbkt{1}(converted from Francs to Dollars at the rate of 70 Francs = \$1). 
+  \dblbkt{1} \item A bonus payment of \$5 if one of your raffle tickets is randomly selected at the end of the experiment.
+\end{enumerate} 
+\item Your total earnings will be the sum of the above three parts.
+\item At the end of the experiment, you will be \dblbkt{1} paid in cash, in private.   
+\end{itemize} 
+
+%ENDTEXT
+
+
+\end{document} 
